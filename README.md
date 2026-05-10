@@ -288,6 +288,6 @@ MIT — use, modifique, distribua. Veja [`LICENSE`](./LICENSE) para detalhes.
 
 *Feito com obstinação.*
 
-[kora.app](https://kora.app) · [Documentação](./SETUP.md) · [Changelog](./CHANGELOG.md)
+[kora.app](https://kora-one-chi.vercel.app/) · [Documentação](./SETUP.md) · [Changelog](./CHANGELOG.md)
 
 </div>
