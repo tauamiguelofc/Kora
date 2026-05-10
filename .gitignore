@@ -1,0 +1,4 @@
+.env.local
+.env.sh
+.vercel
+node_modules

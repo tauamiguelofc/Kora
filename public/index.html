@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kora — Inteligência e Ligação Artificial</title>
+  <meta name="description" content="Kora não armazena o que você pensa. Ela aprende como você pensa." />
+  <meta property="og:title" content="Kora — Inteligência e Ligação Artificial" />
+  <meta property="og:description" content="A primeira IA que conhece quem você é, conecta o que você pensa, e age antes de você perguntar." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/landing.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
+</head>
+<body>
+
+<!-- Fundo com partículas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">◈</span>
+      <span class="logo-text">kora</span>
+    </a>
+    <div class="nav-actions">
+      <a href="/onboarding.html" class="btn btn-ghost btn-sm">Entrar</a>
+      <a href="/onboarding.html?mode=register" class="btn btn-primary btn-sm">Começar grátis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Versão 0.1 — acesso antecipado</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line" id="typed-line-1"></span>
+      <span class="line accent-line" id="typed-line-2"></span>
+      <span class="line" id="typed-line-3"></span>
+    </h1>
+
+    <p class="hero-sub" id="hero-sub">
+      Não é um chatbot. É a primeira plataforma de <strong>Inteligência e Ligação Artificial</strong> — onde a IA conhece quem você é, conecta o que você pensa, e age antes de você perguntar.
+    </p>
+
+    <div class="hero-cta" id="hero-cta">
+      <a href="/onboarding.html?mode=register" class="btn btn-primary btn-lg">
+        Começar a Fundação
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <button class="btn btn-ghost btn-lg" id="how-btn">Como funciona</button>
+    </div>
+
+    <div class="hero-proof">
+      <span class="proof-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7l3.5 3.5L12 3.5" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Memória local — seus dados nunca sobem para nossos servidores
+      </span>
+      <span class="proof-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7l3.5 3.5L12 3.5" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Três IAs trabalhando juntas, invisíveis para você
+      </span>
+      <span class="proof-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7l3.5 3.5L12 3.5" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Gratuito para começar. Sempre.
+      </span>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- Diferença -->
+<section class="diff-section" id="diff">
+  <div class="section-inner">
+    <div class="section-label">A diferença real</div>
+    <h2 class="section-title">Você já usou IA. Isso é outra coisa.</h2>
+
+    <div class="diff-grid">
+      <div class="diff-card other">
+        <div class="diff-card-label">Todo o resto</div>
+        <ul class="diff-list">
+          <li>Cada conversa começa do zero</li>
+          <li>Não sabe nada sobre você</li>
+          <li>Você precisa repetir contexto sempre</li>
+          <li>Reage ao que você pergunta</li>
+          <li>Seus dados ficam no servidor deles</li>
+        </ul>
+      </div>
+      <div class="diff-divider">
+        <span class="logo-mark">◈</span>
+      </div>
+      <div class="diff-card kora">
+        <div class="diff-card-label accent">Kora</div>
+        <ul class="diff-list">
+          <li>Lembra de tudo que você construiu</li>
+          <li>Conhece como você pensa e decide</li>
+          <li>Conecta projetos, ideias e padrões</li>
+          <li>Age antes de você perguntar</li>
+          <li>Seus dados ficam no seu dispositivo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Como funciona -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <div class="section-label">Como funciona</div>
+    <h2 class="section-title">Três camadas que ninguém mais tem</h2>
+
+    <div class="steps">
+      <div class="step" style="--delay: 0ms">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Fundação</h3>
+          <p>Uma conversa, não um formulário. O Kora te faz três perguntas e cria seu arquivo de identidade — <code>meu_castelo.kora</code> — criptografado localmente. É seu. Nós não temos cópia.</p>
+        </div>
+      </div>
+      <div class="step" style="--delay: 100ms">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Memória que cresce</h3>
+          <p>A cada sessão, a Kora aprende mais sobre como você pensa — suas decisões, seus padrões, seus projetos. Não armazena fatos. Aprende conexões.</p>
+        </div>
+      </div>
+      <div class="step" style="--delay: 200ms">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Voz interior</h3>
+          <p>A Kora não espera você perguntar. Ela monitora o que você está construindo e aparece como uma voz discreta quando identifica algo relevante — uma deadline esquecida, uma contradição, uma conexão que você não viu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacidade -->
+<section class="privacy-section">
+  <div class="section-inner privacy-inner">
+    <div class="privacy-visual">
+      <div class="pv-box local">
+        <div class="pv-icon">🔐</div>
+        <div class="pv-label">Seu dispositivo</div>
+        <div class="pv-items">
+          <span>Nome real</span>
+          <span>Memórias</span>
+          <span>Preferências</span>
+          <span>Nós do grafo</span>
+        </div>
+        <div class="pv-note">Criptografado. Só você acessa.</div>
+      </div>
+      <div class="pv-arrow">
+        <span>contexto anônimo</span>
+        <svg width="80" height="16" viewBox="0 0 80 16">
+          <path d="M0 8h72M64 2l8 6-8 6" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="pv-box server">
+        <div class="pv-icon">☁</div>
+        <div class="pv-label">Servidores Kora</div>
+        <div class="pv-items">
+          <span>Histórico de chats</span>
+          <span>Hash do usuário</span>
+          <span>Metadados</span>
+        </div>
+        <div class="pv-note">Sem identificadores reais.</div>
+      </div>
+    </div>
+    <div class="privacy-text">
+      <div class="section-label">Arquitetura de privacidade</div>
+      <h2 class="section-title">Se alguém invadir nosso servidor, não encontra nada sobre você.</h2>
+      <p>Seus dados pessoais ficam no seu dispositivo, criptografados com uma chave que só você tem. O servidor da Kora recebe contexto, nunca identidade. Esse é o modelo que ninguém adotou porque complica o produto — e é exatamente por isso que é nossa vantagem real.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Planos -->
+<section class="plans-section" id="planos">
+  <div class="section-inner">
+    <div class="section-label">Planos</div>
+    <h2 class="section-title">Comece de graça. Cresça quando precisar.</h2>
+
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">R$0 <span>/mês</span></div>
+        <div class="plan-desc">Para conhecer o Kora e viciar.</div>
+        <ul class="plan-features">
+          <li>Memória de até 50 nós</li>
+          <li>2 projetos ativos</li>
+          <li>50 mensagens por dia</li>
+          <li>Acesso às 3 IAs</li>
+        </ul>
+        <a href="/onboarding.html?mode=register" class="btn btn-ghost plan-btn">Começar grátis</a>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-badge">Mais popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">R$29 <span>/mês</span></div>
+        <div class="plan-desc">Para quem usa de verdade.</div>
+        <ul class="plan-features">
+          <li>Memória ilimitada</li>
+          <li>Projetos ilimitados</li>
+          <li>Mensagens ilimitadas</li>
+          <li>Pensamento proativo</li>
+          <li>Exportação completa</li>
+        </ul>
+        <a href="/onboarding.html?mode=register&plan=pro" class="btn btn-primary plan-btn">Assinar Pro</a>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-name">Builder</div>
+        <div class="plan-price">R$79 <span>/mês</span></div>
+        <div class="plan-desc">Para quem constrói coisas sérias.</div>
+        <ul class="plan-features">
+          <li>Tudo do Pro</li>
+          <li>3 Salas empresariais</li>
+          <li>Até 10 membros/Sala</li>
+          <li>Roteamento prioritário</li>
+          <li>Analytics das Salas</li>
+        </ul>
+        <a href="/onboarding.html?mode=register&plan=builder" class="btn btn-ghost plan-btn">Assinar Builder</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="final-cta">
+  <div class="section-inner text-center">
+    <div class="final-mark">◈</div>
+    <h2 class="final-title">Kora não armazena o que você pensa.<br>Ela aprende <em>como</em> você pensa.</h2>
+    <a href="/onboarding.html?mode=register" class="btn btn-primary btn-xl">
+      Começar a Fundação
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <p class="final-note">Gratuito. Sem cartão de crédito. Sem bullshit.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo">
+      <span class="logo-mark">◈</span>
+      <span class="logo-text">kora</span>
+    </span>
+    <span class="footer-copy">© 2025 Kora Intelligence. Todos os direitos reservados.</span>
+    <div class="footer-links">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: Como funciona -->
+<div class="modal-overlay" id="how-modal">
+  <div class="modal">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-content">
+      <div class="modal-logo">◈ kora</div>
+      <h3>A diferença entre falar com um estranho inteligente e falar com alguém que te acompanha há anos.</h3>
+      <div class="modal-steps">
+        <div class="ms"><span class="ms-num">1</span><p>Você cria seu arquivo de memória local durante a <strong>Fundação</strong> — uma conversa de 2 minutos.</p></div>
+        <div class="ms"><span class="ms-num">2</span><p>A cada sessão, fragmentos relevantes são enviados às IAs de forma anônima — sem nome, sem CPF.</p></div>
+        <div class="ms"><span class="ms-num">3</span><p>Com o tempo, a Kora identifica padrões, conecta projetos e age proativamente quando vê algo relevante.</p></div>
+      </div>
+      <a href="/onboarding.html?mode=register" class="btn btn-primary" style="width:100%; justify-content:center">Começar agora</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script src="/js/landing.js"></script>
+</body>
+</html>

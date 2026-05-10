@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundação — Kora</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/onboarding.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
+</head>
+<body>
+
+<div class="ob-wrap">
+  <!-- Logo -->
+  <a href="/" class="ob-logo">
+    <span class="logo-mark">◈</span>
+    <span class="logo-text">kora</span>
+  </a>
+
+  <!-- Painel principal -->
+  <div class="ob-panel" id="ob-panel">
+
+    <!-- ── ETAPA 0: Auth (login/registro) ──────────────────────────────── -->
+    <div class="ob-step active" id="step-auth">
+      <div class="ob-step-inner">
+        <div class="tab-switcher">
+          <button class="tab-btn active" id="tab-register">Criar conta</button>
+          <button class="tab-btn" id="tab-login">Entrar</button>
+        </div>
+
+        <!-- Registro -->
+        <div id="form-register">
+          <div class="form-group">
+            <label class="form-label">Como você quer ser chamado?</label>
+            <input type="text" id="reg-name" class="input" placeholder="Seu nome ou apelido" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" id="reg-email" class="input" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Senha (mínimo 8 caracteres)</label>
+            <input type="password" id="reg-pass" class="input" placeholder="••••••••" autocomplete="new-password" />
+          </div>
+          <button class="btn btn-primary btn-full" id="btn-register">
+            Criar minha conta
+          </button>
+          <p class="form-note">Ao criar uma conta, você concorda com nossa política de privacidade. Seus dados pessoais ficam no seu dispositivo.</p>
+        </div>
+
+        <!-- Login -->
+        <div id="form-login" style="display:none">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" id="log-email" class="input" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Senha</label>
+            <input type="password" id="log-pass" class="input" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <button class="btn btn-primary btn-full" id="btn-login">Entrar</button>
+        </div>
+
+        <div class="form-error" id="auth-error" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 1: Fundação — conversa de onboarding ─────────────────── -->
+    <div class="ob-step" id="step-foundation">
+      <div class="ob-step-inner">
+        <div class="foundation-header">
+          <div class="foundation-mark">◈</div>
+          <h2>Vamos criar sua Memória.</h2>
+          <p>Não é um formulário. São três perguntas. Depois disso, a Kora começa a te conhecer.</p>
+        </div>
+
+        <div class="foundation-chat" id="foundation-chat">
+          <!-- Mensagens aparecerão aqui -->
+        </div>
+
+        <div class="foundation-input-wrap" id="foundation-input-wrap" style="display:none">
+          <input type="text" id="foundation-input" class="input" placeholder="Escreva aqui..." maxlength="300" />
+          <button class="btn btn-primary" id="foundation-send">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 2: Arquivo criado ─────────────────────────────────────── -->
+    <div class="ob-step" id="step-done">
+      <div class="ob-step-inner text-center">
+        <div class="done-anim">
+          <div class="done-ring"></div>
+          <div class="done-mark">◈</div>
+        </div>
+        <h2 id="done-title">Sua Memória foi criada.</h2>
+        <p id="done-desc">O arquivo <code id="done-filename">memoria.kora</code> existe agora no seu dispositivo. A Kora nunca terá uma cópia deste arquivo.</p>
+        <div class="done-stats" id="done-stats"></div>
+        <a href="/app.html" class="btn btn-primary btn-full" id="btn-go-app">
+          Abrir o Kora
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /ob-panel -->
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script src="/js/memory.js"></script>
+<script src="/js/onboarding.js"></script>
+</body>
+</html>
