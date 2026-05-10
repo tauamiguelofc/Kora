@@ -2,3 +2,5 @@
 .env.sh
 .vercel
 node_modules
+dev.sh
+.env.sh
